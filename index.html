@@ -16,11 +16,7 @@
         --medium-gray: #64748b;
         --border-color: #e2e8f0;
     }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
         font-family: 'Poppins', sans-serif;
         line-height: 1.7;
@@ -32,7 +28,6 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 24px;
-        position: relative;
     }
     /* HEADER */
     .header {
@@ -60,7 +55,6 @@
         font-weight: 700;
         color: var(--dark-color);
         margin-bottom: 16px;
-        line-height: 1.2;
         letter-spacing: 0.03em;
         animation: fadeInSlideDown 1s ease 0.2s forwards;
         opacity: 0;
@@ -69,7 +63,6 @@
         font-size: 1.3rem;
         color: var(--medium-gray);
         margin-bottom: 40px;
-        font-weight: 400;
         animation: fadeInSlideDown 1s ease 0.4s forwards;
         opacity: 0;
     }
@@ -94,7 +87,6 @@
         padding: 36px 24px;
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: default;
     }
     .stat-item:hover {
         transform: translateY(-12px);
@@ -104,8 +96,6 @@
         font-size: 3rem;
         font-weight: 800;
         color: var(--primary-color);
-        letter-spacing: 0.02em;
-        line-height: 1;
     }
     .stat-label {
         font-size: 1.1rem;
@@ -113,14 +103,8 @@
         margin-top: 12px;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
     }
-    .stat-desc {
-        font-size: 0.9rem;
-        color: var(--medium-gray);
-        margin-top: 5px;
-        opacity: 0.75;
-    }
+    .stat-desc { font-size: 0.9rem; color: var(--medium-gray); margin-top: 5px; opacity: 0.75; }
     /* PDF Section */
     .pdf-section {
         background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
@@ -131,30 +115,12 @@
         max-width: 720px;
         border-radius: 25px;
         box-shadow: 0 10px 48px rgba(23, 42, 77, 0.6);
-        position: relative;
         animation: fadeInSlideUp 1s ease 0.5s forwards;
         opacity: 0;
     }
-    .pdf-section h2 {
-        font-size: 2.75rem;
-        font-weight: 800;
-        margin-bottom: 16px;
-    }
-    .pdf-tagline {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        color: var(--secondary-color);
-        font-weight: 600;
-        letter-spacing: 0.015em;
-    }
-    .pdf-description {
-        font-size: 1.15rem;
-        margin-bottom: 32px;
-        opacity: 0.9;
-        max-width: 480px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    .pdf-section h2 { font-size: 2.75rem; font-weight: 800; margin-bottom: 16px; }
+    .pdf-tagline { font-size: 1.5rem; margin-bottom: 10px; color: var(--secondary-color); font-weight: 600; }
+    .pdf-description { font-size: 1.15rem; margin-bottom: 32px; opacity: 0.9; max-width: 480px; margin: auto; }
     .pdf-badge {
         display: inline-flex;
         align-items: center;
@@ -167,45 +133,21 @@
         font-weight: 600;
         font-size: 1rem;
         cursor: pointer;
-        user-select: none;
-        transition: background 0.25s ease;
+        transition: background 0.25s;
     }
-    .pdf-badge:hover {
-        background: #fff;
-        color: var(--primary-color);
-    }
-    .pdf-badge i {
-        font-size: 1.5rem;
-    }
-    /* Main Content Cards */
-    .main-content {
-        padding: 80px 0;
-        animation: fadeIn 1.5s ease 0.6s forwards;
-        opacity: 0;
-    }
-    .section-header {
-        text-align: center;
-        margin-bottom: 55px;
-    }
-    .section-header h2 {
-        font-size: 2.6rem;
-        font-weight: 700;
-        color: var(--dark-color);
-        margin-bottom: 0.3rem;
-        letter-spacing: 0.03em;
-    }
-    .section-header p {
-        font-size: 1.15rem;
-        color: var(--medium-gray);
-        max-width: 550px;
-        margin: 0 auto;
-    }
+    .pdf-badge:hover { background: #fff; color: var(--primary-color); }
+    .pdf-badge i { font-size: 1.5rem; }
+    /* Main Content */
+    .main-content { padding: 80px 0; animation: fadeIn 1.5s ease 0.6s forwards; opacity: 0; }
+    .section-header { text-align: center; margin-bottom: 55px; }
+    .section-header h2 { font-size: 2.6rem; font-weight: 700; color: var(--dark-color); margin-bottom: 0.3rem; }
+    .section-header p { font-size: 1.15rem; color: var(--medium-gray); max-width: 550px; margin: auto; }
     .content-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 42px;
         max-width: 1140px;
-        margin: 0 auto;
+        margin: auto;
     }
     .content-card {
         background: white;
@@ -213,93 +155,60 @@
         border-radius: 25px;
         padding: 42px 28px;
         transition: all 0.4s ease;
-        cursor: default;
         box-shadow: 0 0 15px rgba(0,0,0,0.08);
-        opacity: 0;
-        transform: translateY(25px);
+        opacity: 0; transform: translateY(25px);
         animation: slideUpFade 0.9s ease forwards;
     }
     .content-card:hover {
         box-shadow: 0 15px 45px rgba(37, 99, 235, 0.2);
         border-color: var(--primary-color);
-        transform: translateY(0);
     }
     .content-card:nth-child(1) { animation-delay: 0.7s; }
     .content-card:nth-child(2) { animation-delay: 0.85s; }
     .content-card:nth-child(3) { animation-delay: 1s; }
-    .card-icon {
-        font-size: 64px;
-        color: var(--primary-color);
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: center;
-    }
+    .card-icon { font-size: 64px; color: var(--primary-color); margin-bottom: 30px; text-align: center; }
     .content-card h3 {
         font-weight: 600;
         font-size: 1.7rem;
-        color: var(--dark-color);
+        text-align: center;
         margin-bottom: 20px;
-        text-align: center;
     }
-    .content-card p {
-        color: var(--medium-gray);
-        margin-bottom: 24px;
-        font-size: 1rem;
-        line-height: 1.6;
-        text-align: center;
-    }
-    .sectors-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 14px;
-    }
+    .content-card p { color: var(--medium-gray); margin-bottom: 24px; text-align: center; }
+    .sectors-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
     .sector-tag {
         background: var(--light-gray);
         color: var(--dark-color);
         padding: 8px 18px;
         border-radius: 20px;
         font-weight: 600;
-        font-size: 0.95rem;
         border: 1px solid var(--border-color);
-        cursor: default;
         transition: background 0.3s, color 0.3s;
     }
-    .sector-tag:hover {
-        background: var(--primary-color);
-        color: #fff;
-    }
+    .sector-tag:hover { background: var(--primary-color); color: #fff; }
     /* Contact Section */
     .contact-section {
         padding: 70px 0;
         background: var(--light-gray);
-        text-align: center;
-        animation: fadeIn 1.8s ease 1s forwards;
-        opacity: 0;
+        animation: fadeIn 1.8s ease 1s forwards; opacity: 0;
     }
     .contact-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 36px;
-        max-width: 1140px;
-        margin: 0 auto;
+        gap: 36px; max-width: 1140px; margin: auto;
     }
     .contact-card {
         background: white;
         padding: 36px 24px;
         border-radius: 25px;
         border: 1px solid var(--border-color);
-        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 5px 18px rgba(0,0,0,0.06);
         transition: all 0.3s ease;
-        cursor: default;
-        opacity: 0;
-        transform: translateY(25px);
+        opacity: 0; transform: translateY(25px);
         animation: slideUpFade 0.9s ease forwards;
     }
     .contact-card:hover {
-        box-shadow: 0 16px 44px rgba(37, 99, 235, 0.1);
+        box-shadow: 0 16px 44px rgba(37,99,235,0.1);
         border-color: var(--primary-color);
-        transform: translateY(0);
     }
     .contact-card:nth-child(1) { animation-delay: 1.1s; }
     .contact-card:nth-child(2) { animation-delay: 1.2s; }
@@ -309,27 +218,19 @@
         color: var(--primary-color);
         margin-bottom: 1rem;
         font-size: 1.35rem;
-        position: relative;
     }
-    .contact-card p {
-        color: var(--medium-gray);
-        font-size: 1rem;
-        line-height: 1.6;
-    }
+    .contact-card p { color: var(--medium-gray); }
     /* CTA Section */
     .cta-section {
         padding: 70px 0;
         text-align: center;
-        background: #fff;
-        animation: fadeIn 2s ease 1.2s forwards;
-        opacity: 0;
+        animation: fadeIn 2s ease 1.2s forwards; opacity: 0;
     }
     .cta-section h2 {
         font-size: 2.7rem;
         font-weight: 700;
         margin-bottom: 14px;
         color: var(--primary-color);
-        letter-spacing: 0.025em;
     }
     .cta-section p {
         font-size: 1.15rem;
@@ -337,12 +238,7 @@
         font-weight: 600;
         margin-bottom: 36px;
     }
-    .cta-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 26px;
-        flex-wrap: wrap;
-    }
+    .cta-buttons { display: flex; justify-content: center; gap: 26px; flex-wrap: wrap; }
     .btn {
         padding: 18px 44px;
         border-radius: 40px;
@@ -350,7 +246,6 @@
         font-weight: 700;
         border: none;
         cursor: pointer;
-        text-decoration: none;
         display: inline-flex;
         align-items: center;
         gap: 10px;
@@ -359,7 +254,7 @@
     .btn-primary {
         background-color: var(--primary-color);
         color: white;
-        box-shadow: 0 8px 25px rgb(37 99 235 / 0.3);
+        box-shadow: 0 8px 25px rgba(37,99,235,0.3);
     }
     .btn-primary:hover {
         background-color: #1e40af;
@@ -374,37 +269,16 @@
         color: white;
     }
     /* ANIMATIONS */
-    @keyframes fadeIn {
-        to { opacity: 1; }
-    }
-    @keyframes fadeInSlideDown {
-        from { opacity: 0; transform: translateY(-30px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInSlideUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideUpFade {
-        to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeIn { to { opacity: 1; } }
+    @keyframes fadeInSlideDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInSlideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideUpFade { to { opacity: 1; transform: translateY(0); } }
     /* RESPONSIVE */
     @media (max-width: 766px) {
         .stats-grid { grid-template-columns: 1fr 1fr; }
-        .three-column-section,
-        .contact-grid,
-        .cta-buttons {
-            flex-direction: column;
-        }
-        .content-grid {
-            grid-template-columns: 1fr;
-        }
-        .btn {
-            width: 100%;
-            justify-content: center;
-        }
+        .content-grid, .contact-grid, .cta-buttons { flex-direction: column; }
+        .btn { width: 100%; justify-content: center; }
     }
-
     /* Modal Styles */
     .modal {
       display: none;
@@ -433,10 +307,6 @@
       font-weight: bold;
       color: var(--primary-color);
       cursor: pointer;
-      transition: color 0.3s ease;
-    }
-    .close-btn:hover {
-      color: var(--secondary-color);
     }
     .modal-content h2 {
       margin-bottom: 1rem;
@@ -444,15 +314,8 @@
       font-weight: 700;
       font-size: 1.9rem;
     }
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 0.4rem;
-      font-weight: 600;
-      color: var(--dark-color);
-    }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; color: var(--dark-color); }
     .form-group input,
     .form-group select,
     .form-group textarea {
@@ -461,8 +324,7 @@
       border: 1.5px solid var(--border-color);
       border-radius: 8px;
       font-size: 1rem;
-      font-family: 'Poppins', sans-serif;
-      transition: border-color 0.3s ease;
+      transition: border-color 0.3s;
     }
     .form-group input:focus,
     .form-group select:focus,
@@ -481,11 +343,9 @@
       border-radius: 40px;
       font-size: 1.1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s;
     }
-    .submit-btn:hover {
-      background-color: var(--secondary-color);
-    }
+    .submit-btn:hover { background-color: var(--secondary-color); }
 </style>
 </head>
 <body>
@@ -496,11 +356,10 @@
             <i class="fas fa-seal-check"></i> Government of India - Ministry of MSME
         </div>
         <h1>India's MSME Global Gateway</h1>
-        <p class="subtitle">
-            From Local Roots to Global Reach - Connect with 60+ Million Micro, Small & Medium Enterprises
-        </p>
+        <p class="subtitle">From Local Roots to Global Reach - Connect with 60+ Million Micro, Small & Medium Enterprises</p>
     </div>
 </header>
+
 <!-- STATS -->
 <section class="stats-section">
     <div class="container">
@@ -528,38 +387,37 @@
         </div>
     </div>
 </section>
-<!-- PDF CONTENT -->
+
+<!-- PDF SECTION -->
 <section class="pdf-section">
     <div class="container">
         <h2>MSME: A Catalyst for Global Growth</h2>
         <div class="pdf-tagline">Empowering Indian MSMEs through global partnerships</div>
-        <div class="pdf-description">
-            Explore Opportunities of Investment & Trade with MSME
-        </div>
-        <div class="pdf-badge" role="button" tabindex="0" aria-label="Official Document Ministry of MSME, Govt of India">
-            <i class="fas fa-file-contract"></i>
-            Official Document - Ministry of MSME, Govt of India
-        </div>
+        <div class="pdf-description">Explore Opportunities of Investment & Trade with MSME</div>
+        <a href="MSMESchemebooklet2024.pdf" class="pdf-badge" download>
+            <i class="fas fa-file-contract"></i> Official Document - Ministry of MSME, Govt of India
+        </a>
     </div>
 </section>
+
 <!-- MAIN CONTENT -->
 <section class="main-content">
     <div class="container">
         <div class="section-header">
-            <h2>Investment &amp; Partnership Opportunities</h2>
+            <h2>Investment & Partnership Opportunities</h2>
             <p>Discover diverse sectors and comprehensive support for international collaboration</p>
         </div>
         <div class="content-grid">
             <div class="content-card">
                 <div class="card-icon"><i class="fas fa-chart-growth"></i></div>
-                <h3>Investment &amp; Trade Opportunities</h3>
+                <h3>Investment & Trade Opportunities</h3>
                 <p>Access India's manufacturing excellence with 35% of total manufacturing output from MSMEs.</p>
-                <h4 style="margin: 20px 0 12px 0; color: var(--primary-color)">Export-Ready Sectors:</h4>
+                <h4 style="margin: 20px 0 12px; color: var(--primary-color)">Export-Ready Sectors:</h4>
                 <div class="sectors-grid">
                     <div class="sector-tag">Pharmaceuticals</div>
                     <div class="sector-tag">Textiles</div>
                     <div class="sector-tag">Auto Components</div>
-                    <div class="sector-tag">IT &amp; ITeS</div>
+                    <div class="sector-tag">IT & ITeS</div>
                     <div class="sector-tag">Healthcare</div>
                     <div class="sector-tag">Leather Goods</div>
                 </div>
@@ -568,7 +426,7 @@
                 <div class="card-icon"><i class="fas fa-network-wired"></i></div>
                 <h3>Supply Chain Integration</h3>
                 <p>Connect with India's robust supply chain network and benefit from global integration capabilities.</p>
-                <h4 style="margin: 20px 0 12px 0; color: var(--primary-color)">Partnership Sectors:</h4>
+                <h4 style="margin: 20px 0 12px; color: var(--primary-color)">Partnership Sectors:</h4>
                 <div class="sectors-grid">
                     <div class="sector-tag">Gems & Jewellery</div>
                     <div class="sector-tag">Engineering</div>
@@ -578,15 +436,15 @@
                     <div class="sector-tag">Tourism</div>
                 </div>
                 <div style="margin-top: 20px; padding: 16px; background: var(--light-gray); border-radius: 8px; border-left: 4px solid var(--secondary-color);">
-                    <strong style="color: var(--dark-color)">Integration Benefits:</strong><br />
+                    <strong style="color: var(--dark-color)">Integration Benefits:</strong><br>
                     <span style="color: var(--medium-gray)">End-to-end supply chain partnerships with international quality standards</span>
                 </div>
             </div>
             <div class="content-card">
                 <div class="card-icon"><i class="fas fa-handshake"></i></div>
-                <h3>Government Support &amp; Policy</h3>
+                <h3>Government Support & Policy</h3>
                 <p>Comprehensive government backing with 100% FDI allowed under automatic route in most MSME sectors.</p>
-                <h4 style="margin: 20px 0 12px 0; color: var(--primary-color)">Emerging Sectors:</h4>
+                <h4 style="margin: 20px 0 12px; color: var(--primary-color)">Emerging Sectors:</h4>
                 <div class="sectors-grid">
                     <div class="sector-tag">Fintech</div>
                     <div class="sector-tag">Digital Services</div>
@@ -596,13 +454,14 @@
                     <div class="sector-tag">AgriTech</div>
                 </div>
                 <div style="margin-top: 20px; padding: 16px; background: var(--light-gray); border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                    <strong style="color: var(--dark-color)">Investment Climate:</strong><br />
+                    <strong style="color: var(--dark-color)">Investment Climate:</strong><br>
                     <span style="color: var(--medium-gray)">Favorable policies with comprehensive incentives and support mechanisms</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- CONTACT SECTION -->
 <section class="contact-section">
     <div class="container">
@@ -613,34 +472,29 @@
         <div class="contact-grid">
             <div class="contact-card">
                 <h4><i class="fas fa-landmark"></i> Ministry Headquarters</h4>
-                <p>
-                    <strong>Address:</strong> Udyog Bhawan, Rafi Marg, New Delhi - 110011<br />
-                    <strong>General Queries:</strong> 011-23063288<br />
-                    <strong>Udyam Registration:</strong> 011-23063800<br />
-                    <strong>PMEGP Queries:</strong> 011-23063641
-                </p>
+                <p><strong>Address:</strong> Udyog Bhawan, Rafi Marg, New Delhi - 110011<br>
+                <strong>General Queries:</strong> 011-23063288<br>
+                <strong>Udyam Registration:</strong> 011-23063800<br>
+                <strong>PMEGP Queries:</strong> 011-23063641</p>
             </div>
             <div class="contact-card">
                 <h4><i class="fas fa-globe-americas"></i> International Cooperation</h4>
-                <p>
-                    <strong>Organization: </strong>NSIC - International Division<br />
-                    <strong>Phone:</strong> 011-26926275<br />
-                    <strong>Email:</strong> icdivision@nsic.co.in<br />
-                    Trade fairs, exhibitions, market intelligence
-                </p>
+                <p><strong>Organization:</strong> NSIC - International Division<br>
+                <strong>Phone:</strong> 011-26926275<br>
+                <strong>Email:</strong> icdivision@nsic.co.in<br>
+                Trade fairs, exhibitions & market intelligence</p>
             </div>
             <div class="contact-card">
                 <h4><i class="fas fa-map-marked-alt"></i> Regional Network</h4>
-                <p>
-                    <strong>Coverage:</strong> 32 MSME Development & Facilitation Offices<br />
-                    <strong>Support:</strong> 27 Branch MSME Development Offices<br />
-                    <strong>Reach:</strong> Pan-India presence<br />
-                    <strong>Focus:</strong> Localized investment support
-                </p>
+                <p><strong>Coverage:</strong> 32 MSME Development & Facilitation Offices<br>
+                <strong>Support:</strong> 27 Branch MSME Development Offices<br>
+                <strong>Reach:</strong> Pan-India presence<br>
+                <strong>Focus:</strong> Localized investment support</p>
             </div>
         </div>
     </div>
 </section>
+
 <!-- CTA SECTION -->
 <section class="cta-section">
     <div class="container">
@@ -648,7 +502,7 @@
         <p>Take the next step in your investment journey with India's most dynamic business sector</p>
         <div class="cta-buttons">
             <button class="btn btn-primary" onclick="openModal('registerModal')"><i class="fas fa-rocket"></i> Register Investment Interest</button>
-            <a href="#guide" class="btn btn-outline"><i class="fas fa-download"></i> Download Investment Guide</a>
+            <a href="msme-investment-guide.pdf" class="btn btn-outline" download><i class="fas fa-download"></i> Download Investment Guide</a>
             <button class="btn btn-outline" onclick="openModal('consultModal')"><i class="fas fa-calendar-check"></i> Schedule Consultation</button>
             <button class="btn btn-outline" onclick="openModal('tradeModal')"><i class="fas fa-handshake"></i> Join Trade Fair</button>
         </div>
@@ -658,238 +512,124 @@
 <!-- MODALS -->
 <div id="registerModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="registerModalLabel" aria-hidden="true">
   <div class="modal-content" role="document">
-    <span class="close-btn" aria-label="Close Modal" onclick="closeModal('registerModal')">&times;</span>
+    <span class="close-btn" onclick="closeModal('registerModal')">&times;</span>
     <h2 id="registerModalLabel">Register Your Investment Interest</h2>
     <form>
       <div class="form-group">
         <label for="reg-company">Company Name*</label>
-        <input type="text" id="reg-company" name="company" required />
+        <input type="text" id="reg-company" required />
       </div>
       <div class="form-group">
-        <label for="reg-sector">Investment Sector of Interest*</label>
-        <select id="reg-sector" name="sector" required>
+        <label for="reg-sector">Sector*</label>
+        <select id="reg-sector" required>
           <option value="">Select Sector</option>
-          <option value="pharmaceuticals">Pharmaceuticals</option>
-          <option value="textiles">Textiles & Apparel</option>
-          <option value="auto">Auto Components</option>
-          <option value="it">IT & ITeS</option>
-          <option value="healthcare">Healthcare</option>
-          <option value="leather">Leather Products</option>
-          <option value="engineering">Engineering Goods</option>
-          <option value="food">Food Processing</option>
-          <option value="fintech">Fintech</option>
-          <option value="other">Other (Specify in comments)</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="reg-investment">Investment Range*</label>
-        <select id="reg-investment" name="investment" required>
-          <option value="">Select Range</option>
-          <option value="under-1m">Under $1 Million</option>
-          <option value="1-5m">$1 - 5 Million</option>
-          <option value="5-10m">$5 - 10 Million</option>
-          <option value="10-25m">$10 - 25 Million</option>
-          <option value="25m-plus">$25 Million+</option>
+          <option>Pharmaceuticals</option>
+          <option>Textiles & Apparel</option>
+          <option>Auto Components</option>
+          <option>IT & ITeS</option>
+          <option>Healthcare</option>
+          <option>Leather</option>
+          <option>Other</option>
         </select>
       </div>
       <div class="form-group">
         <label for="reg-contact">Contact Person*</label>
-        <input type="text" id="reg-contact" name="contact" required />
+        <input type="text" id="reg-contact" required />
       </div>
       <div class="form-group">
-        <label for="reg-email">Email Address*</label>
-        <input type="email" id="reg-email" name="email" required />
+        <label for="reg-email">Email*</label>
+        <input type="email" id="reg-email" required />
       </div>
       <div class="form-group">
-        <label for="reg-phone">Phone Number*</label>
-        <input type="tel" id="reg-phone" name="phone" required />
+        <label for="reg-phone">Phone*</label>
+        <input type="tel" id="reg-phone" required />
       </div>
-      <div class="form-group">
-        <label for="reg-country">Country*</label>
-        <input type="text" id="reg-country" name="country" required />
-      </div>
-      <div class="form-group">
-        <label for="reg-comments">Additional Comments</label>
-        <textarea id="reg-comments" name="comments" rows="3" placeholder="Tell us about your interest..."></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Submit Investment Interest</button>
+      <button type="submit" class="submit-btn">Submit</button>
     </form>
   </div>
 </div>
 
 <div id="consultModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="consultModalLabel" aria-hidden="true">
   <div class="modal-content" role="document">
-    <span class="close-btn" aria-label="Close Modal" onclick="closeModal('consultModal')">&times;</span>
+    <span class="close-btn" onclick="closeModal('consultModal')">&times;</span>
     <h2 id="consultModalLabel">Schedule Your Consultation</h2>
     <form>
       <div class="form-group">
-        <label for="consult-name">Your Name*</label>
-        <input type="text" id="consult-name" name="name" required />
+        <label for="consult-name">Name*</label>
+        <input type="text" id="consult-name" required />
       </div>
       <div class="form-group">
-        <label for="consult-email">Email Address*</label>
-        <input type="email" id="consult-email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="consult-company">Company/Organization*</label>
-        <input type="text" id="consult-company" name="company" required />
-      </div>
-      <div class="form-group">
-        <label for="consult-type">Consultation Type*</label>
-        <select id="consult-type" name="type" required>
-          <option value="">Select Type</option>
-          <option value="video">Video Call (Zoom/Teams)</option>
-          <option value="phone">Phone Call</option>
-          <option value="in-person-delhi">In-Person (Delhi)</option>
-          <option value="in-person-regional">In-Person (Regional Office)</option>
-        </select>
+        <label for="consult-email">Email*</label>
+        <input type="email" id="consult-email" required />
       </div>
       <div class="form-group">
         <label for="consult-date">Preferred Date*</label>
-        <input type="date" id="consult-date" name="date" required />
+        <input type="date" id="consult-date" required />
       </div>
       <div class="form-group">
-        <label for="consult-time">Preferred Time Slot*</label>
-        <select id="consult-time" name="time" required>
+        <label for="consult-time">Time Slot*</label>
+        <select id="consult-time" required>
           <option value="">Select Time</option>
-          <option value="morning">Morning (9:00 AM - 12:00 PM IST)</option>
-          <option value="afternoon">Afternoon (2:00 PM - 5:00 PM IST)</option>
-          <option value="evening">Evening (6:00 PM - 8:00 PM IST)</option>
+          <option>Morning</option>
+          <option>Afternoon</option>
+          <option>Evening</option>
         </select>
       </div>
-      <div class="form-group">
-        <label for="consult-focus">Areas of Interest*</label>
-        <select id="consult-focus" name="focus" required>
-          <option value="">Select Focus Area</option>
-          <option value="investment-opportunities">Investment Opportunities</option>
-          <option value="regulatory-compliance">Regulatory & Compliance</option>
-          <option value="partnership-models">Partnership Models</option>
-          <option value="market-entry">Market Entry Strategy</option>
-          <option value="government-schemes">Government Schemes & Incentives</option>
-          <option value="export-opportunities">Export Opportunities</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="consult-comments">Specific Questions/Topics</label>
-        <textarea id="consult-comments" name="comments" rows="3" placeholder="What would you like to discuss?"></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Schedule Consultation</button>
+      <button type="submit" class="submit-btn">Schedule</button>
     </form>
   </div>
 </div>
 
 <div id="tradeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="tradeModalLabel" aria-hidden="true">
   <div class="modal-content" role="document">
-    <span class="close-btn" aria-label="Close Modal" onclick="closeModal('tradeModal')">&times;</span>
-    <h2 id="tradeModalLabel">Join MSME Trade Fair</h2>
+    <span class="close-btn" onclick="closeModal('tradeModal')">&times;</span>
+    <h2 id="tradeModalLabel">Join Trade Fair</h2>
     <form>
       <div class="form-group">
-        <label for="trade-event">Upcoming Trade Fair*</label>
-        <select id="trade-event" name="event" required>
+        <label for="trade-event">Event*</label>
+        <select id="trade-event" required>
           <option value="">Select Event</option>
-          <option value="hannover-messe-2025">Hannover Messe 2025 (Mar 31-Apr 4, Germany)</option>
-          <option value="msme-expo-2025">11th India International MSME Expo & Summit (Aug 28-30, 2025, New Delhi)</option>
-          <option value="bharat-mobility-2025">Bharat Mobility Global Expo 2025 (Jan 17-22, New Delhi)</option>
-          <option value="aahar-2025">39th AAHAR 2025 - Food & Hospitality (Mar 4-8, New Delhi)</option>
-          <option value="indiasoft-2025">25th INDIASOFT 2025 - IT Exhibition (Mar 19-21, New Delhi)</option>
-          <option value="world-food-india-2025">World Food India 2025 (Sept 25-28, New Delhi)</option>
-          <option value="upits-2025">Uttar Pradesh Intl Trade Show (Sept 25-29, Greater Noida)</option>
-          <option value="ihgf-autumn-2025">60th IHGF Delhi Fair Autumn 2025 (Oct 13-17, Greater Noida)</option>
-          <option value="bharat-tex-2025">Bharat Tex 2025 - Textile Expo (Feb 14-17, New Delhi)</option>
-          <option value="india-steel-expo-2025">India Steel Expo 2025 (Apr 24-26, Mumbai)</option>
-          <option value="other-event">Other (Specify in comments)</option>
+          <option>Hannover Messe 2025</option>
+          <option>11th MSME Expo & Summit</option>
+          <option>AAHAR 2025</option>
+          <option>Other</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="participation-type">Participation Type*</label>
-        <select id="participation-type" name="participation" required>
-          <option value="">Select Type</option>
-          <option value="visitor">Visitor Registration</option>
-          <option value="exhibitor">Exhibitor Registration</option>
-          <option value="buyer">International Buyer</option>
-          <option value="delegate">Trade Delegate</option>
-        </select>
+        <label for="trade-company">Company*</label>
+        <input type="text" id="trade-company" required />
       </div>
       <div class="form-group">
-        <label for="trade-company">Company Name*</label>
-        <input type="text" id="trade-company" name="company" required />
+        <label for="trade-contact">Contact Person*</label>
+        <input type="text" id="trade-contact" required />
       </div>
-      <div class="form-group">
-        <label for="business-sector">Business Sector*</label>
-        <select id="business-sector" name="sector" required>
-          <option value="">Select Sector</option>
-          <option value="pharmaceuticals">Pharmaceuticals</option>
-          <option value="textiles">Textiles & Apparel</option>
-          <option value="auto">Automotive</option>
-          <option value="electronics">Electronics & IT</option>
-          <option value="engineering">Engineering & Machinery</option>
-          <option value="food">Food & Agriculture</option>
-          <option value="healthcare">Healthcare & Medical</option>
-          <option value="handicrafts">Handicrafts & Gifts</option>
-          <option value="chemicals">Chemicals & Materials</option>
-          <option value="renewable">Renewable Energy</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="trade-name">Contact Person*</label>
-        <input type="text" id="trade-name" name="contact" required />
-      </div>
-      <div class="form-group">
-        <label for="trade-email">Email Address*</label>
-        <input type="email" id="trade-email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="trade-phone">Phone Number*</label>
-        <input type="tel" id="trade-phone" name="phone" required />
-      </div>
-      <div class="form-group">
-        <label for="trade-country">Country/Region*</label>
-        <input type="text" id="trade-country" name="country" required />
-      </div>
-      <div class="form-group">
-        <label for="products-interest">Products/Services of Interest</label>
-        <textarea id="products-interest" name="products" rows="2" placeholder="What products or services are you looking for?"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="trade-objectives">Trade Fair Objectives</label>
-        <textarea id="trade-objectives" name="objectives" rows="2" placeholder="What do you hope to achieve at this trade fair?"></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Register for Trade Fair</button>
+      <button type="submit" class="submit-btn">Register</button>
     </form>
   </div>
 </div>
 
 <script>
-  function openModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "block";
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = "hidden";
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+    document.body.style.overflow = 'hidden';
   }
-  function closeModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "none";
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = "auto";
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+    document.body.style.overflow = 'auto';
   }
-  window.onclick = function(event) {
-    document.querySelectorAll('.modal').forEach(modal => {
-      if(event.target === modal) {
-        modal.style.display = "none";
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = "auto";
-      }
+  window.onclick = e => {
+    document.querySelectorAll('.modal').forEach(m => {
+      if (e.target === m) { m.style.display = 'none'; document.body.style.overflow='auto'; }
     });
   }
-  document.querySelectorAll('.modal form').forEach(form => {
-    form.addEventListener('submit', e => {
+  document.querySelectorAll('.modal form').forEach(f => {
+    f.addEventListener('submit', e => {
       e.preventDefault();
-      alert('Thank you for submitting! We will contact you shortly.');
-      closeModal(form.closest('.modal').id);
-      form.reset();
+      alert('Thank you! We will be in touch.');
+      closeModal(f.closest('.modal').id);
+      f.reset();
     });
   });
 </script>
 </body>
 </html>
-
